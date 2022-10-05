@@ -1,0 +1,38 @@
+version: "3.4"
+services:
+  monkeytype-redis:
+    container_name: monkeytype-redis
+    image: redis:6.2.6
+    ports:
+      - "${DOCKER_REDIS_PORT:-6379}:${DOCKER_REDIS_PORT:-6379}"
+    restart: on-failure
+    volumes:
+      - redis-data:/data
+
+  monkeytype-mongodb:
+    container_name: monkeytype-mongodb
+    image: mongo:5.0.8
+    restart: on-failure
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "${DOCKER_DB_PORT:-27017}:${DOCKER_DB_PORT:-27017}"
+
+  monkeytype-app:
+    image: monkeytype:v1
+    build: .
+    restart: always
+    # stdin_open: true
+    # entrypoint: /bin/bash
+    depends_on:
+      - monkeytype-redis
+      - monkeytype-mongodb
+    ports:
+      - 3000:3000
+      - 5005:5005
+      # - 27017:27017
+      # - 6379:6379
+    
+volumes:
+  mongo-data:
+  redis-data:

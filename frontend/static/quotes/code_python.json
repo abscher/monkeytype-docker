@@ -1,0 +1,179 @@
+{
+  "language": "code_python",
+  "groups": [
+    [0, 100],
+    [101, 300],
+    [301, 600],
+    [601, 9999]
+  ],
+  "quotes": [
+    {
+      "text": "class Person:\\n\\tdef __init__(self, name, age):\\n\\t\\tself.name = name\\n\\t\\tself.age = age",
+      "source": "w3schools - Python Classes/Objects",
+      "id": 1,
+      "length": 89
+    },
+    {
+      "text": "def my_function(food):\\n\\tfor x in food:\\n\\t\\tprint(x)\\n\\nfruits = [\"apple\", \"banana\", \"cherry\"]\\nmy_function(fruits)",
+      "source": "w3schools - Python functions",
+      "id": 2,
+      "length": 117
+    },
+    {
+      "text": "f = open(\"demofile.txt\", \"r\")\\nprint(f.readline())\\nf.close()",
+      "source": "w3schools - Python Read File",
+      "id": 3,
+      "length": 61
+    },
+    {
+      "text": "def solveSudoku(sudoku, i=0, j=0):\\n\\ti, j = findNextCellToFill(sudoku)\\n\\tif i == -1:\\n\\t\\treturn True\\n\\tfor e in range(1, 10):\\n\\t\\tif isValid(sudoku, i, j, e):\\n\\t\\t\\tsudoku[i][j] = e\\n\\t\\t\\tif solveSudoku(sudoku, i, j):\\n\\t\\t\\t\\treturn True\\n\\t\\t\\tsudoku[i][j] = 0\\n\\treturn False",
+      "source": "GitHub - hastagAB/Awesome-Python-Scripts - sudoku solver by ayedaemon",
+      "id": 4,
+      "length": 285
+    },
+    {
+      "text": "def bruteforce(charset, maxlength):\\n\\treturn (''.join(candidate)\\n\\t\\tfor candidate in itertools.chain.from_iterable(itertools.product(charset, repeat=i)\\n\\t\\tfor i in range(1, maxlength + 1)))\\ndef extractFile(arFile, attempt):\\n\\ttry:\\n\\t\\tarFile.extractall(pwd=attempt)\\n\\t\\tprint \"Password found! password is %s\"%attempt\\n\\t\\texit(0)\\n\\texcept Exception,e:\\n\\t\\tpass\\n\\tif datetime.datetime.now().second%20==0:\\n\\t\\tprint 'At %s'%attempt",
+      "source": "GitHub -  GauthamGoli/rar-Password-Cracker",
+      "id": 5,
+      "length": 442
+    },
+    {
+      "text": "soup = BeautifulSoup(html, features='lxml')\\nprint(soup.h1)\\nprint(line_break, soup.p)\\n\\nall_href = soup.find_all('a')\\nall_href = [l['href'] for l in all_href]\\nprint(line_break, all_href)",
+      "source": "GitHub - MorvanZhou/easy-scraping-tutorial",
+      "id": 6,
+      "length": 190
+    },
+    {
+      "text": "def bubbleSort(arr):\\n\\tn = len(arr)\\n\\tfor i in range(n-1):\\n\\t\\tfor j in range(0, n-i-1):\\n\\t\\t\\tif arr[j] > arr[j + 1]:\\n\\t\\t\\t\\tarr[j], arr[j + 1] = arr[j + 1], arr[j]",
+      "source": "geeksforgeeks - Bubble Sort",
+      "id": 7,
+      "length": 171
+    },
+    {
+      "text": "def search(arr, n, x):\\n\\tfor i in range(0, n):\\n\\t\\tif (arr[i] == x):\\n\\t\\t\\treturn i\\n\\treturn -1",
+      "source": "geeksforgeeks - Linear Search",
+      "id": 8,
+      "length": 99
+    },
+    {
+      "text": "def fibonacci(n):\\n\\tif n < 0:\\n\\t\\tprint(\"Incorrect input\")\\n\\telif n == 0:\\n\\t\\treturn 0\\n\\telif n == 1 or n == 2:\\n\\t\\treturn 1\\n\\telse:\\n\\t\\treturn fibonacci(n - 1) + fibonacci(n - 2)",
+      "source": "geeksforgeeks - Fibonacci",
+      "id": 9,
+      "length": 187
+    },
+    {
+      "text": "def factorial(n):\\n\\treturn 1 if (n == 1 or n == 0) else n * factorial(n - 1)",
+      "source": "geeksforgeeks - Factorial",
+      "id": 10,
+      "length": 77
+    },
+    {
+      "text": "class Node:\\n\\tdef __init__(self, next=None, prev=None, data=None):\\n\\t\\tself.next = next\\n\\t\\tself.prev = prev\\n\\t\\tself.data = data",
+      "source": "geeksforgeeks - Doubly Linked List",
+      "id": 11,
+      "length": 133
+    },
+    {
+      "text": "def push(self, new_data):\\n\\tnew_node = Node(data=new_data)\\n\\tnew_node.next = self.head\\n\\tnew_node.prev = None\\n\\tif self.head is not None:\\n\\t\\tself.head.prev = new_node\\n\\tself.head = new_node",
+      "source": "geeksforgeeks - Doubly Linked List",
+      "id": 12,
+      "length": 196
+    },
+    {
+      "text": "def append(self, new_data):\\n\\tnew_node = Node(new_data)\\n\\tif self.head is None:\\n\\t\\tself.head = new_node\\n\\t\\treturn\\n\\tlast = self.head\\n\\twhile last.next:\\n\\t\\tlast = last.next\\n\\tlast.next = new_node\\n\\tnew_node.prev = last\\n\\tretur",
+      "source": "geeksforgeeks - Doubly Linked List",
+      "id": 13,
+      "length": 238
+    },
+    {
+      "text": "def __str__(self):\\n\\tcur = self.head.next\\n\\tout = \"\"\\n\\twhile cur:\\n\\t\\tout += str(cur.value) + \"->\"\\n\\t\\tcur = cur.next\\n\\treturn out[:-3]",
+      "source": "geeksforgeeks - Stack",
+      "id": 14,
+      "length": 141
+    },
+    {
+      "text": "def peek(self):\\n\\tif self.isEmpty():\\n\\t\\traise Exception(\"Peeking from an empty stack\")\\n\\treturn self.head.next.value",
+      "source": "geeksforgeeks - Stack",
+      "id": 15,
+      "length": 120
+    },
+    {
+      "text": "def push(self, value):\\n\\tnode = Node(value)\\n\\tnode.next = self.head.next\\n\\tself.head.next = node\\n\\tself.size += 1",
+      "source": "geeksforgeeks - Stack",
+      "id": 16,
+      "length": 117
+    },
+    {
+      "text": "def pop(self):\\n\\tif self.isEmpty():\\n\\t\\traise Exception(\"Popping from an empty stack\")\\n\\tremove = self.head.next\\n\\tself.head.next = self.head.next.next\\n\\tself.size -= 1\\n\\treturn remove.value",
+      "source": "geeksforgeeks - Stack",
+      "id": 17,
+      "length": 196
+    },
+    {
+      "text": "if __name__ == \"__main__\":\\n\\tstack = Stack()\\n\\tfor i in range(1, 11):\\n\\t\\tstack.push(i)\\n\\tprint(f\"Stack: {stack}\")\\n\\n\\tfor _ in range(1, 6):\\n\\t\\tremove = stack.pop()\\n\\t\\tprint(f\"Pop: {remove}\")\\n\\tprint(f\"Stack: {stack}\")",
+      "source": "geeksforgeeks - Stack",
+      "id": 18,
+      "length": 228
+    },
+    {
+      "text": "def printList(arr):\\n\\tfor i in range(len(arr)):\\n\\t\\tprint(arr[i], end=\" \")\\n\\tprint()",
+      "source": "geeksforgeeks - Merge Sort",
+      "id": 19,
+      "length": 87
+    },
+    {
+      "text": "def inorder(temp):\\n\\tif (not temp):\\n\\t\\treturn\\n\\tinorder(temp.left)\\n\\tprint(temp.data, end=\" \")\\n\\tinorder(temp.right)",
+      "source": "geeksforgeeks - Binary Search Tree",
+      "id": 20,
+      "length": 122
+    },
+    {
+      "text": "s = \"*-A/BC-/AKL\"\\nstack = []\\noperators = set(['+', '-', '*', '/', '^'])\\ns = s[::-1]\\nfor i in s:\\n\\tif i in operators:\\n\\t\\ta = stack.pop()\\n\\t\\tb = stack.pop()\\n\\t\\ttemp = a + b + i\\n\\t\\tstack.append(temp)\\n\\telse:\\n\\t\\tstack.append(i)\\nprint(*stack)",
+      "source": "geeksforgeeks - Prefix Postfix Conversion",
+      "id": 21,
+      "length": 254
+    },
+    {
+      "text": "def printList(self):\\n\\ttemp = self.head\\n\\twhile (temp):\\n\\t\\tprint(temp.data)\\n\\t\\ttemp = temp.next",
+      "source": "geeksforgeeks - Linked List",
+      "id": 22,
+      "length": 101
+    },
+    {
+      "text": "def insertAfter(self, prev_node, new_data):\\n\\tif prev_node is None:\\n\\t\\tprint(\"The given previous node must inLinkedList.\")\\n\\t\\treturn\\n\\tnew_node = Node(new_data)\\n\\tnew_node.next = prev_node.next\\n\\tprev_node.next = new_node",
+      "source": "geeksforgeeks - Linked List",
+      "id": 23,
+      "length": 229
+    },
+    {
+      "text": "def append(self, new_data):\\n\\tnew_node = Node(new_data)\\n\\tif self.head is None:\\n\\t\\tself.head = new_node\\n\\t\\treturn\\n\\tlast = self.head\\n\\twhile (last.next):\\n\\t\\tlast = last.next\\n\\tlast.next = new_node",
+      "source": "geeksforgeeks - Linked List",
+      "id": 24,
+      "length": 207
+    },
+    {
+      "text": "def getNthNode(self, head, position, llist):\\n\\tcount = 0\\n\\tif (head):\\n\\t\\tif count == position:\\n\\t\\t\\tprint(head.data)\\n\\t\\telse:\\n\\t\\t\\tllist.getNthNode(head.next, position - 1, llist)\\n\\telse:\\n\\t\\tprint(\"Index Doesn't exist\")",
+      "source": "geeksforgeeks - Linked List",
+      "id": 25,
+      "length": 232
+    },
+    {
+      "text": "def addToEmpty(self, data):\\n\\tif (self.last != None):\\n\\t\\treturn self.last\\n\\ttemp = Node(data)\\n\\tself.last = temp\\n\\tself.last.next = self.last\\n\\treturn self.last",
+      "source": "geeksforgeeks - Circular Singly Linked List",
+      "id": 26,
+      "length": 167
+    },
+    {
+      "text": "def addBegin(self, data):\\n\\tif (self.last == None):\\n\\t\\treturn self.addToEmpty(data)\\n\\ttemp = Node(data)\\n\\ttemp.next = self.last.next\\n\\tself.last.next = temp\\n\\treturn self.last",
+      "source": "geeksforgeeks - Circular Singly Linked List",
+      "id": 27,
+      "length": 182
+    },
+    {
+      "text": "def addEnd(self, data):\\n\\tif (self.last == None):\\n\\t\\treturn self.addToEmpty(data)\\n\\ttemp = Node(data)\\n\\ttemp.next = self.last.next\\n\\tself.last.next = temp\\n\\tself.last = temp\\n\\treturn self.last",
+      "source": "geeksforgeeks - Circular Singly Linked List",
+      "id": 28,
+      "length": 200
+    }
+  ]
+}
