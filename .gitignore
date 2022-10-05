@@ -66,7 +66,7 @@ node_modules_bak/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+#.env
 
 #vs code
 .vscode
@@ -75,10 +75,10 @@ node_modules_bak/
 .idea
 
 #firebase
-.firebaserc
+#.firebaserc
 .firebaserc_copy
-serviceAccountKey*.json
-frontend/src/ts/constants/firebase-config.ts
+#serviceAccountKey*.json
+#frontend/src/ts/constants/firebase-config.ts
 frontend/src/ts/constants/firebase-config-live.ts
 
 #generated files
