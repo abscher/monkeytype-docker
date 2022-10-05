@@ -96,7 +96,7 @@ frontend/static/adtest.html
 backend/lastId.txt
 backend/log_success.txt
 backend/credentials/*.json
-backend/.env
+#backend/.env
 
 static/adtest.html
 backend/migrationStats.txt
